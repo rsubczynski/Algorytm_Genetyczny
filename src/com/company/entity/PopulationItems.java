@@ -7,7 +7,7 @@ public class PopulationItems implements Comparable<PopulationItems> {
     }
 
     public String getBinaryScoreScore() {
-        return Integer.toBinaryString(score);
+        return Integer.toBinaryString(score+ 0b100000000).substring(1);
     }
 
     public int getAssessmentOfAdaptation() {
