@@ -20,8 +20,8 @@ public class AlgortymGenetyczny {
         startpopulationsList = createPopulationsList(populationCount);
         populationsList = startpopulationsList;
         getSumaPrzysotsoania(populationsList);
-        showPopulationList(populationsList);
         sortPopulationList(populationsList);
+        showPopulationList(populationsList);
     }
 
     private void sortPopulationList(ArrayList<PopulationItems> populationsList) {

@@ -1,6 +1,7 @@
 package com.company.entity;
 
 public class PopulationItems implements Comparable<PopulationItems> {
+
     public int getScore() {
         return score;
     }
@@ -17,12 +18,6 @@ public class PopulationItems implements Comparable<PopulationItems> {
         this.score = score;
     }
 
-
-    public String getScoreAsString(){
-        return String.valueOf(getAssessmentOfAdaptation());
-    }
-
-
     private int score;
 
     public PopulationItems(int populationScore) {
@@ -31,6 +26,10 @@ public class PopulationItems implements Comparable<PopulationItems> {
 
     @Override
     public int compareTo(PopulationItems o) {
-            return getScoreAsString().compareTo(o.getScoreAsString());
+        if(this.getAssessmentOfAdaptation()<o.getAssessmentOfAdaptation())
+            return -1;
+        else if(o.getAssessmentOfAdaptation()<this.getAssessmentOfAdaptation())
+            return 1;
+        return 0;
         }
 }
